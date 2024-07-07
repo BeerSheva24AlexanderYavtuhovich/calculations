@@ -35,12 +35,12 @@ public class CalculationsTest {
 
     @Test
     void sumOfDigitsTest() {
-        assertEquals(6, sumOfDigits(123));
+        assertEquals(6, sumOfDigits(-123));
     }
 
     @Test
     void maxDigitTest() {
-        assertEquals(4, maxDigit(143));
+        assertEquals(4, maxDigit(-143));
     }
     @Test
     void isDividedOnTest() {
