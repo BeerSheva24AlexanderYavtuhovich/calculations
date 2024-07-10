@@ -10,13 +10,7 @@ public class Calculations {
     }
 
     public static int divide(int op1, int op2) {
-        int res = 0;
-        try {
-            res = op1 / op2;
-        } catch (ArithmeticException e) {
-            System.out.println("division by zero");
-        }
-        return res;
+        return op1 / op2;
     }
 
     public static int subtract(int op1, int op2) {
@@ -46,14 +40,8 @@ public class Calculations {
     }
 
     public static boolean isDividedOn(int number, int divider) {
-        boolean res = false;
-        try {
-            res = number % divider == 0;
-        } catch (ArithmeticException e) {
-            System.out.println("division by zero");
-        }
-        return res;
-       
+        return divider != 0 && number % divider == 0;
+
     }
 
 }

@@ -1,6 +1,7 @@
 package telran.introduce;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 import org.junit.jupiter.api.Test;
 
 import static telran.introduce.Calculations.divide;
@@ -26,6 +27,7 @@ public class CalculationsTest {
     @Test
     void divideTest() {
         assertEquals(10, divide(20, 2));
+        assertThrowsExactly(ArithmeticException.class, () -> divide(10, 0));
     }
 
     @Test
